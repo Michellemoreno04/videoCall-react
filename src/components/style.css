@@ -1,0 +1,148 @@
+
+.video-container{
+    display: flex;
+    gap: 10px;
+   
+}
+@media screen and (max-width: 650px) {
+    .video-container {
+       display: flex;
+        flex-direction: column; /* Cambiar a disposición horizontal en pantallas más grandes */
+        justify-content: space-around; /* Espaciar contenido horizontalmente */
+       
+    }
+    .myVideo, .userVideo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%; /* Video ocupa el 100% del ancho en pantallas pequeñas */
+        max-width: 100%; /* Limitar el ancho máximo al 100% del contenedor */
+    }
+
+}
+.call-info{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebe9e9;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+
+.myVideo{
+    width: 600px;
+    height: 400px;
+    background-color: #F5F5F5;
+    border-radius:10px ;
+object-fit: cover;/* esto es para que el video use todo el espacio dentro del contenedor*/
+    
+}
+.userVideo{
+    width: 600px;
+    height: 400px;
+    background-color: #F5F5F5;
+    border-radius:10px ;
+object-fit: cover;/* esto es para que el video use todo el espacio dentro del contenedor*/
+}
+
+.inputName{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: none;
+}
+.inputName:hover{
+    border: solid black 1px;
+}
+
+.inputId{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 5px;
+border: none;
+}
+.inputId:hover{
+    border: solid black 1px;
+}
+
+
+/* From Uiverse.io by cssbuttons-io */ 
+.btnCall {
+    position: relative;
+    text-decoration: none;
+    padding: 1em;
+    display: inline-block;
+    border-radius: 1em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(35, 35, 248);
+    cursor: pointer;
+   }
+   
+   .btnCall:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btnCall:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btnCall::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .btnCall::after {
+    background-color: #fff;
+   }
+   
+   .btnCall:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+   .btnHangUp{
+    position: relative;
+    text-decoration: none;
+    padding: 1em;
+    display: inline-block;
+    border-radius: 1em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+
+   }
+   .btnHangUp:hover{
+    background-color: rgba(255, 0, 0, 0.767);
+   }
+ .notification-call{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 25px;
+    top: 0;
+    background-color: rgba(35, 35, 248, 0.445);
+    padding: 25px ;
+    border-radius: 15px  80px;
+ }
