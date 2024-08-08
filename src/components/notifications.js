@@ -5,7 +5,7 @@ import './style.css'
 
 
 const Notifications = () => {
-const {answerCall,call,callAccepted,name} = useContext(SocketContext)
+const {answerCall,call,callAccepted} = useContext(SocketContext)
 
 
 
