@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
 import { SocketContext } from "../SocketContext";
-import CopyToClipboard from "react-copy-to-clipboard";
-import Swal from "sweetalert2";
 
 
-const Options = ({ children }) => {
+
+const Options = ({children}) => {
   const { me, callAccepted, callEnded, leaveCall, nextCall,callUser,idTocall } = useContext(SocketContext);
 
   return (

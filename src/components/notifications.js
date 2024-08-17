@@ -15,7 +15,7 @@ const {answerCall,call,callAccepted} = useContext(SocketContext)
       {call.isReceivedCall && !callAccepted && (
 
         <div className='notification-call'>
-          <h1>{call.name} is calling...</h1>
+          <p className='caller-name'>{call.name}Fulano is calling...</p>
           <p>Notification...</p>
           <button onClick={answerCall} className='btnCall'>
             Answer
