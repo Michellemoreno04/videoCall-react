@@ -2,11 +2,9 @@ import React, { useState, useContext,useEffect } from 'react';
 import { SocketContext } from '../../SocketContext';
 import './chat.css'
 
-export const Chat = () => {
+ const Chat = () => {
     const { messages,setMessages, sendMessage,socket} = useContext(SocketContext);
     const [message, setMessage] = useState('');
-
-
    
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -34,6 +32,7 @@ export const Chat = () => {
       
     return (
       <div className='chat-container'>
+        <HeadChat/>
         <div className='messages-container'>
           {messages.map((texMessage, index) => (
             <div key={index} className='message'>
@@ -56,3 +55,17 @@ export const Chat = () => {
     );
   };
   
+
+  export const HeadChat = () => {
+const { nextCall } = useContext(SocketContext);
+    const handleStartClick = () => {
+      nextCall(); // Llamar a callUser cuando se hace clic en el botón "Start"
+    };
+    return (
+      <div className='head-chat'>
+        <button className='btn-start' onClick={handleStartClick}>Next</button>
+        <button className='btn-stop'>Stop</button>
+      </div>
+    );
+  };
+  export default Chat;

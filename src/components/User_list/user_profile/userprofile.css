@@ -1,0 +1,19 @@
+.user-profile{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.user-photo-profile{
+width: 300px;
+height: 300px;
+border-radius: 50%;
+}
+.btn-send-message{
+    margin: 25px;
+}
+p,h1{
+    color: black;
+}

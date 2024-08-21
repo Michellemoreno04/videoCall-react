@@ -1,387 +1,383 @@
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #27425f;
+  padding: 5px;
+  width: 500px;
 
-.video-container{
-    display: flex;
-    flex-direction: column;
-   gap: 5px;
-background-color: #27425F;
-padding: 5px;
 }
 @media screen and (max-width: 650px) {
-    .video-container {
-       display: flex;
-        flex-direction: column; /* Cambiar a disposición horizontal en pantallas más grandes */
-        /*justify-content: space-around; /* Espaciar contenido horizontalmente */
-       
-    }
-    .myVideo, .userVideo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%; /* Video ocupa el 100% del ancho en pantallas pequeñas */
-        max-width: 100%; /* Limitar el ancho máximo al 100% del contenedor */
-    }
-
-}
-.call-info{
-    width: 400px;
-    height: 200px;
+  .video-container {
+    display: flex;
+    flex-direction: column; /* Cambiar a disposición horizontal en pantallas más grandes */
+    /*justify-content: space-around; /* Espaciar contenido horizontalmente */
+  }
+  .myVideo,
+  .userVideo {
     display: flex;
     flex-direction: column;
-    background-color: #ebe9e9;
-    border-radius: 10px;
-    padding: 10px;
-   
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* Video ocupa el 100% del ancho en pantallas pequeñas */
+    max-width: 100%; /* Limitar el ancho máximo al 100% del contenedor */
+  }
+}
+.call-info {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebe9e9;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.myVideo{
-    width: 600px;
-   height: 400px;
-   background-color: #172738;
-    border-radius:5px ;
-object-fit: cover;/* esto es para que el video use todo el espacio dentro del contenedor*/
-  
+.myVideo {
+  width: 800px;
+  height: 50vh;
+  background-color: #172738;
+  border-radius: 5px;
+  object-fit: cover; /* esto es para que el video use todo el espacio dentro del contenedor*/
 }
-.userVideo{
-    width: 600px;
-    height: 400px;
-    background-color: #172738;
-    border-radius:5px ;
-object-fit: cover;/* esto es para que el video use todo el espacio dentro del contenedor*/
-
-    
+.userVideo {
+  width: 600px;
+  height: 50vh;
+  background-color: #172738;
+  border-radius: 5px;
+  object-fit: cover; /* esto es para que el video use todo el espacio dentro del contenedor*/
 }
 
-.inputName{
-    width: 200px;
-    height: 25px;
-    border-radius: 5px;
-    margin-right: 5px;
-    border: none;
+.inputName {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: none;
 }
-.inputName:hover{
-    border: solid black 1px;
-}
-
-.inputId{
-    width: 200px;
-    height: 25px;
-    border-radius: 5px;
-    margin-right: 5px;
-border: none;
-}
-.inputId:hover{
-    border: solid black 1px;
+.inputName:hover {
+  border: solid black 1px;
 }
 
+.inputId {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: none;
+}
+.inputId:hover {
+  border: solid black 1px;
+}
 
-/* From Uiverse.io by cssbuttons-io */ 
+/* From Uiverse.io by cssbuttons-io */
 .btnCall {
-    position: relative;
-    text-decoration: none;
-    padding: 1em;
-    display: inline-block;
-    border-radius: 1em;
-    transition: all .2s;
-    border: none;
-    font-family: inherit;
-    font-weight: 500;
-    color: white;
-    background-color: rgb(35, 35, 248);
-    cursor: pointer;
-   }
-   
-   .btnCall:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   }
-   
-   .btnCall:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   }
-   
-   .btnCall::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-   }
-   
-   .btnCall::after {
-    background-color: #fff;
-   }
-   
-   .btnCall:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-   }
-   .btnHangUp{
-    position: relative;
-    text-decoration: none;
-    padding: 1em;
-    display: inline-block;
-    border-radius: 1em;
-    transition: all .2s;
-    border: none;
-    font-family: inherit;
-    font-weight: 500;
-    color: white;
-    background-color: red;
-    cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  padding: 1em;
+  display: inline-block;
+  border-radius: 1em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: white;
+  background-color: rgb(35, 35, 248);
+  cursor: pointer;
+}
 
-   }
-   .btnHangUp:hover{
-    background-color: rgba(255, 0, 0, 0.767);
-   }
- .notification-call{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-   z-index: 5;
-    justify-content: center;
-    align-items: center;
-    background-color: #2897f8f5;
-    color: white;
-    
- }
- .caller-name{
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 10px;
- }
+.btnCall:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
- .video-wrapper {
-    position: relative;
-    width: 100%; /* Ajusta según el tamaño que desees para el video */
-    max-width: 640px; /* Tamaño máximo opcional */
-    height: auto;
-  }
+.btnCall:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
-  .loading-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 10;
-    pointer-events: none; /* Para asegurarse de que los clics pasen a través del overlay */
-  }
+.btnCall::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btnCall::after {
+  background-color: #fff;
+}
+
+.btnCall:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btnHangUp {
+  position: relative;
+  text-decoration: none;
+  padding: 1em;
+  display: inline-block;
+  border-radius: 1em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+.btnHangUp:hover {
+  background-color: rgba(255, 0, 0, 0.767);
+}
+.notification-call {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  background-color: #2897f8f5;
+  color: white;
+}
+.name {
+  
  
+  background-color: #17273863;
+  padding: 8px;
+}
+.caller-name {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 
- /* From Uiverse.io by mobinkakei */ 
+.video-wrapper {
+  position: relative;
+  width: 100%; /* Ajusta según el tamaño que desees para el video */
+ 
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 10;
+  pointer-events: none; /* Para asegurarse de que los clics pasen a través del overlay */
+}
+
+/* From Uiverse.io by mobinkakei */
 #wifi-loader {
-    
-    --background: #62abff;
-    --front-color: #4f29f0;
-    --back-color: #c3c8de;
-    --text-color: #414856;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 35%;
+  --background: #62abff;
+  --front-color: #4f29f0;
+  --back-color: #c3c8de;
+  --text-color: #414856;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 35%;
   left: 35%;
+}
+
+#wifi-loader svg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wifi-loader svg circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-100deg);
+  transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+  stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+  stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+  height: 86px;
+  width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+  stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+  animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+  animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+  height: 60px;
+  width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+  stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+  animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+  animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+  height: 34px;
+  width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+  stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+  animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+  animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+  position: absolute;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before,
+#wifi-loader .text::after {
+  content: attr(data-text);
+  text-align: center;
+}
+
+#wifi-loader .text::before {
+  color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+  color: var(--front-color);
+  animation: text-animation76 3.6s ease infinite;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes circle-outer135 {
+  0% {
+    stroke-dashoffset: 25;
   }
-  
-  #wifi-loader svg {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  25% {
+    stroke-dashoffset: 0;
   }
-  
-  #wifi-loader svg circle {
-    position: absolute;
-    fill: none;
-    stroke-width: 6px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transform: rotate(-100deg);
-    transform-origin: center;
+
+  65% {
+    stroke-dashoffset: 301;
   }
-  
-  #wifi-loader svg circle.back {
-    stroke: var(--back-color);
+
+  80% {
+    stroke-dashoffset: 276;
   }
-  
-  #wifi-loader svg circle.front {
-    stroke: var(--front-color);
+
+  100% {
+    stroke-dashoffset: 276;
   }
-  
-  #wifi-loader svg.circle-outer {
-    height: 86px;
-    width: 86px;
+}
+
+@keyframes circle-middle6123 {
+  0% {
+    stroke-dashoffset: 17;
   }
-  
-  #wifi-loader svg.circle-outer circle {
-    stroke-dasharray: 62.75 188.25;
+
+  25% {
+    stroke-dashoffset: 0;
   }
-  
-  #wifi-loader svg.circle-outer circle.back {
-    animation: circle-outer135 1.8s ease infinite 0.3s;
+
+  65% {
+    stroke-dashoffset: 204;
   }
-  
-  #wifi-loader svg.circle-outer circle.front {
-    animation: circle-outer135 1.8s ease infinite 0.15s;
+
+  80% {
+    stroke-dashoffset: 187;
   }
-  
-  #wifi-loader svg.circle-middle {
-    height: 60px;
-    width: 60px;
+
+  100% {
+    stroke-dashoffset: 187;
   }
-  
-  #wifi-loader svg.circle-middle circle {
-    stroke-dasharray: 42.5 127.5;
+}
+
+@keyframes circle-inner162 {
+  0% {
+    stroke-dashoffset: 9;
   }
-  
-  #wifi-loader svg.circle-middle circle.back {
-    animation: circle-middle6123 1.8s ease infinite 0.25s;
+
+  25% {
+    stroke-dashoffset: 0;
   }
-  
-  #wifi-loader svg.circle-middle circle.front {
-    animation: circle-middle6123 1.8s ease infinite 0.1s;
+
+  65% {
+    stroke-dashoffset: 106;
   }
-  
-  #wifi-loader svg.circle-inner {
-    height: 34px;
-    width: 34px;
+
+  80% {
+    stroke-dashoffset: 97;
   }
-  
-  #wifi-loader svg.circle-inner circle {
-    stroke-dasharray: 22 66;
+
+  100% {
+    stroke-dashoffset: 97;
   }
-  
-  #wifi-loader svg.circle-inner circle.back {
-    animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+@keyframes text-animation76 {
+  0% {
+    clip-path: inset(0 100% 0 0);
   }
-  
-  #wifi-loader svg.circle-inner circle.front {
-    animation: circle-inner162 1.8s ease infinite 0.05s;
+
+  50% {
+    clip-path: inset(0);
   }
-  
-  #wifi-loader .text {
-    position: absolute;
-    bottom: -40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: lowercase;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 0.2px;
+
+  100% {
+    clip-path: inset(0 0 0 100%);
   }
-  
-  #wifi-loader .text::before, #wifi-loader .text::after {
-    content: attr(data-text);
-    text-align: center;
-  }
-  
-  #wifi-loader .text::before {
-    color: var(--text-color);
-  }
-  
-  #wifi-loader .text::after {
-    color: var(--front-color);
-    animation: text-animation76 3.6s ease infinite;
-    position: absolute;
-    left: 0;
-  }
-  
-  @keyframes circle-outer135 {
-    0% {
-      stroke-dashoffset: 25;
-    }
-  
-    25% {
-      stroke-dashoffset: 0;
-    }
-  
-    65% {
-      stroke-dashoffset: 301;
-    }
-  
-    80% {
-      stroke-dashoffset: 276;
-    }
-  
-    100% {
-      stroke-dashoffset: 276;
-    }
-  }
-  
-  @keyframes circle-middle6123 {
-    0% {
-      stroke-dashoffset: 17;
-    }
-  
-    25% {
-      stroke-dashoffset: 0;
-    }
-  
-    65% {
-      stroke-dashoffset: 204;
-    }
-  
-    80% {
-      stroke-dashoffset: 187;
-    }
-  
-    100% {
-      stroke-dashoffset: 187;
-    }
-  }
-  
-  @keyframes circle-inner162 {
-    0% {
-      stroke-dashoffset: 9;
-    }
-  
-    25% {
-      stroke-dashoffset: 0;
-    }
-  
-    65% {
-      stroke-dashoffset: 106;
-    }
-  
-    80% {
-      stroke-dashoffset: 97;
-    }
-  
-    100% {
-      stroke-dashoffset: 97;
-    }
-  }
-  
-  @keyframes text-animation76 {
-    0% {
-      clip-path: inset(0 100% 0 0);
-    }
-  
-    50% {
-      clip-path: inset(0);
-    }
-  
-    100% {
-      clip-path: inset(0 0 0 100%);
-    }
-  }
-   
+}

@@ -1,84 +1,44 @@
 .navbar{
     display: flex;
+    justify-content: end;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: 30px;
     padding: 25px;
     border: solid  black 1px;
-    border-radius: 5px;
-position: relative;
 background-color: #27425F;
+
 }
-
-
-/* From Uiverse.io by arieshiphop */ 
-.btn-start {
-    font-size: 17px;
-    padding: 0.5em 2em;
-    border: transparent;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: dodgerblue;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 5px;
-   }
-   
-   .btn-start:hover {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
-   }
-   
-   .btn-start:active {
-    transform: translate(0em, 0.2em);
-   }
-
-   .btn-stop {
-    font-size: 17px;
-    padding: 0.5em 2em;
-    border: transparent;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: rgb(136, 137, 137);
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-   }
-   
-   .btn-stop:hover {
-    background-color: rgb(104, 105, 105);
-   }
-   
-   .btn-stop:active {
-    transform: translate(0em, 0.2em);
-   }
-
-   .gender-content{
-display: flex;
-width: 300px;
-gap: 10px;
-    
-   }
-   .country{
-    width: 300px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    
-
-   }
-   option{
-    color: black;
-   }
-   .navbar-container{
+.head-chat{
     width: 100%;
-   }
-   .head-chat{
-    width: 100%;
-    
     background-color: white;
     display: flex;
     flex-direction: column;
     padding: 5px;
     border-radius: 3px;
    }
+  
+.btn-nav{
+    margin: 5px;
+}
+.foto-logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+  text-decoration: underline;
+}
+.img-logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+
+}
+.menu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+ 
+
+}

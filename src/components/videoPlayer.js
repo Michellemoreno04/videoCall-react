@@ -5,12 +5,14 @@ import { SocketContext } from "../SocketContext";
 import { Toaster, toast } from "sonner";
 import "../App.css";
 import Notifications from "../components/notifications";
+import { auth } from "../firebase/firebase";
 
 
 
-const VideoPlayer = ({ children }) => {
+const VideoPlayer = ({children,userEmail}) => {
   const { call, callAccepted, myVideo, userVideo, llamando, setLlamando,me } = useContext(SocketContext);
   
+
   
   useEffect(() => {
     if (callAccepted) {
@@ -24,19 +26,20 @@ const VideoPlayer = ({ children }) => {
     }
   }, [callAccepted, llamando, setLlamando]);
 
- 
 
   return (
     <div className="video-container">
 
       <Toaster theme="dark" />
 
+      
       <video playsInline muted ref={myVideo} autoPlay className="myVideo"/>
-<p className="name">from: {call.from}</p>
+
       <div>
 
       <div className="video-wrapper">
       
+
       { !callAccepted && !llamando ?(
 //loader 
 <div id="wifi-loader">
@@ -65,13 +68,14 @@ const VideoPlayer = ({ children }) => {
       }
      
       <video playsInline muted ref={userVideo} autoPlay className="userVideo"/>
-      <p className="name"> me: {me}</p>
-      </div>
       
-      
-      </div>
-      {children}
 
+      </div>
+      
+      
+      </div>
+      
+{children}
    
     </div>
   );

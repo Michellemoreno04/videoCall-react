@@ -1,61 +1,77 @@
 import React from 'react'
 import '../nabvar/nabvar.css'
-import { Select } from '@chakra-ui/react'
-import { useContext } from 'react'
-import { SocketContext } from '../../SocketContext' 
-import { Chat } from '../chatComponent/chat'
-
-
+import { logout } from '../../firebase/auth'
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuGroup,
+  MenuDivider,
+  Button,
+  Icon
+} from '@chakra-ui/react'
+import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
+import { Link, useNavigate } from 'react-router-dom'
+import { getAuth } from 'firebase/auth'
+import no_profile from '../../pictures/no_profile.jpg'
 
 export const Navbar = () => {
-  const {nextCall} =useContext(SocketContext);
+  const auth = getAuth();
+  const user = auth.currentUser; // Obtén el usuario autenticado
   
 
-  const handleStartClick = () => {
-    nextCall(); // Llamar a callUser cuando se hace clic en el botón "Start"
-  };
-
   return (
-    <div className='navbar-container'>
+    <nav className='navbar'>
+     
 
-<nav className='navbar'>
-<div className='btn-control'>
-<button className='btn-start' onClick={handleStartClick}>Next</button>
-<button className='btn-stop'>Stop</button>
-</div>
+      <Link to='/usersList' className='btn-nav'>
+        <Button colorScheme='blue'>Usuarios</Button>
+      </Link>
+      <Link to='/videoChat' className='btn-nav'>
+        <Button colorScheme='blue'>Video Chat</Button>
+      </Link>
 
-<div className='gender-content'>
-<Select placeholder='Select Gender' color={'white'}>
-  <option value='option1'>Masculino</option>
-  <option value='option2'>Femenino</option>
-  <option value='option3'>Otros...</option>
-</Select>
-
-
-<div className='country'>
-<Select placeholder='Country:All' color={'white'}>
-  <option value='option1'>Optiones...</option>
-  <option value='option2'>Optiones...</option>
-  <option value='option3'>Optiones...</option>
-</Select>
-</div>
-
-</div> 
+      <Cuenta user={user} />
+      
     </nav>
-    <HeadChat />
-    <Chat />
-    </div>
   )
 }
 
+export const Cuenta = ({ user }) => {
+  const navigate = useNavigate();
 
+  const goToProfile = () => {
+    if (user) {
+      // Redirige al usuario a su perfil usando su UID
+      navigate(`/profile/${user.uid}`);
+    } else {
+      // Si no hay usuario autenticado, redirige a la página de inicio de sesión o muestra un mensaje
+      navigate('/login');
+    }
+  };
 
-
-
-export const HeadChat = () => {
   return (
-    <div className='head-chat'>
-      <h2>ChatRoom</h2>
+    <div className='menu'>
+      <Menu>
+        <MenuButton as={Button} colorScheme='transparent'>
+          {
+            <div className='foto-logo-container'>
+            <img src={user && user.photoURL ? user.photoURL : no_profile} alt="logo" className='img-logo'/>
+            <span>{user && user.displayName ? user.displayName : "Usuario"} 
+              
+            </span>
+          </div>
+          }
+        </MenuButton>
+        <MenuList>
+          <MenuGroup>
+            <MenuItem onClick={goToProfile}>My Account</MenuItem>
+          </MenuGroup>
+          <MenuDivider />
+          <MenuItem onClick={logout}>Logout</MenuItem>
+        </MenuList>
+      </Menu>
     </div>
   )
 }
